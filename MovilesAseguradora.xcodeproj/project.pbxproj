@@ -7,13 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2225E2131D8FE395004F69CC /* road.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2225E2121D8FE395004F69CC /* road.jpeg */; };
+		225743851D8E23C60062007B /* ContactoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225743841D8E23C60062007B /* ContactoCell.swift */; };
+		225743881D8F13EF0062007B /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225743861D8F13EF0062007B /* Realm.framework */; };
+		225743891D8F13EF0062007B /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 225743861D8F13EF0062007B /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2257438A1D8F13EF0062007B /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225743871D8F13EF0062007B /* RealmSwift.framework */; };
+		2257438B1D8F13EF0062007B /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 225743871D8F13EF0062007B /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2279A6551D8DE0D100D96195 /* Contacto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A6541D8DE0D100D96195 /* Contacto.swift */; };
+		2279A6571D8DF88500D96195 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A6561D8DF88500D96195 /* Message.swift */; };
+		2279A6591D8E0EA300D96195 /* MisContactosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A6581D8E0EA300D96195 /* MisContactosVC.swift */; };
+		22A067141D804F9900F44027 /* ContactoDetalleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A067131D804F9900F44027 /* ContactoDetalleVC.swift */; };
 		22B052261D7CBDB500BDA82F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B052251D7CBDB500BDA82F /* AppDelegate.swift */; };
-		22B052281D7CBDB500BDA82F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B052271D7CBDB500BDA82F /* ViewController.swift */; };
+		22B052281D7CBDB500BDA82F /* mainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B052271D7CBDB500BDA82F /* mainVC.swift */; };
 		22B0522B1D7CBDB500BDA82F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B052291D7CBDB500BDA82F /* Main.storyboard */; };
 		22B0522D1D7CBDB500BDA82F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B0522C1D7CBDB500BDA82F /* Assets.xcassets */; };
 		22B052301D7CBDB500BDA82F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B0522E1D7CBDB500BDA82F /* LaunchScreen.storyboard */; };
 		22B0523B1D7CBDB600BDA82F /* MovilesAseguradoraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0523A1D7CBDB600BDA82F /* MovilesAseguradoraTests.swift */; };
 		22B052461D7CBDB600BDA82F /* MovilesAseguradoraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B052451D7CBDB600BDA82F /* MovilesAseguradoraUITests.swift */; };
+		22B052551D7CC8EB00BDA82F /* app.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B052541D7CC8EB00BDA82F /* app.swift */; };
+		22B052571D7CC99C00BDA82F /* EmergenciaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B052561D7CC99C00BDA82F /* EmergenciaVC.swift */; };
+		22B052591D7CDEE100BDA82F /* EmergenciaDetalleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B052581D7CDEE100BDA82F /* EmergenciaDetalleVC.swift */; };
+		22B0525B1D7F231F00BDA82F /* ContactosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0525A1D7F231F00BDA82F /* ContactosVC.swift */; };
+		22B0525D1D7F445100BDA82F /* operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0525C1D7F445100BDA82F /* operators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +48,33 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2257438C1D8F13F00062007B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2257438B1D8F13EF0062007B /* RealmSwift.framework in Embed Frameworks */,
+				225743891D8F13EF0062007B /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2225E2121D8FE395004F69CC /* road.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = road.jpeg; sourceTree = "<group>"; };
+		225743841D8E23C60062007B /* ContactoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactoCell.swift; sourceTree = "<group>"; };
+		225743861D8F13EF0062007B /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		225743871D8F13EF0062007B /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		2279A6541D8DE0D100D96195 /* Contacto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contacto.swift; sourceTree = "<group>"; };
+		2279A6561D8DF88500D96195 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		2279A6581D8E0EA300D96195 /* MisContactosVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisContactosVC.swift; sourceTree = "<group>"; };
+		22A067131D804F9900F44027 /* ContactoDetalleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactoDetalleVC.swift; sourceTree = "<group>"; };
 		22B052221D7CBDB500BDA82F /* MovilesAseguradora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovilesAseguradora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B052251D7CBDB500BDA82F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22B052271D7CBDB500BDA82F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22B052271D7CBDB500BDA82F /* mainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainVC.swift; sourceTree = "<group>"; };
 		22B0522A1D7CBDB500BDA82F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22B0522C1D7CBDB500BDA82F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22B0522F1D7CBDB500BDA82F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +85,11 @@
 		22B052411D7CBDB600BDA82F /* MovilesAseguradoraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovilesAseguradoraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B052451D7CBDB600BDA82F /* MovilesAseguradoraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovilesAseguradoraUITests.swift; sourceTree = "<group>"; };
 		22B052471D7CBDB600BDA82F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22B052541D7CC8EB00BDA82F /* app.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = app.swift; sourceTree = "<group>"; };
+		22B052561D7CC99C00BDA82F /* EmergenciaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergenciaVC.swift; sourceTree = "<group>"; };
+		22B052581D7CDEE100BDA82F /* EmergenciaDetalleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergenciaDetalleVC.swift; sourceTree = "<group>"; };
+		22B0525A1D7F231F00BDA82F /* ContactosVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactosVC.swift; sourceTree = "<group>"; };
+		22B0525C1D7F445100BDA82F /* operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = operators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2257438A1D8F13EF0062007B /* RealmSwift.framework in Frameworks */,
+				225743881D8F13EF0062007B /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +122,8 @@
 		22B052191D7CBDB500BDA82F = {
 			isa = PBXGroup;
 			children = (
+				225743861D8F13EF0062007B /* Realm.framework */,
+				225743871D8F13EF0062007B /* RealmSwift.framework */,
 				22B052241D7CBDB500BDA82F /* MovilesAseguradora */,
 				22B052391D7CBDB600BDA82F /* MovilesAseguradoraTests */,
 				22B052441D7CBDB600BDA82F /* MovilesAseguradoraUITests */,
@@ -97,12 +144,20 @@
 		22B052241D7CBDB500BDA82F /* MovilesAseguradora */ = {
 			isa = PBXGroup;
 			children = (
+				22B052531D7CC8C100BDA82F /* Logic */,
 				22B052251D7CBDB500BDA82F /* AppDelegate.swift */,
-				22B052271D7CBDB500BDA82F /* ViewController.swift */,
+				22B0525C1D7F445100BDA82F /* operators.swift */,
+				22B052271D7CBDB500BDA82F /* mainVC.swift */,
+				22B052581D7CDEE100BDA82F /* EmergenciaDetalleVC.swift */,
+				22B052561D7CC99C00BDA82F /* EmergenciaVC.swift */,
+				22B0525A1D7F231F00BDA82F /* ContactosVC.swift */,
+				22A067131D804F9900F44027 /* ContactoDetalleVC.swift */,
 				22B052291D7CBDB500BDA82F /* Main.storyboard */,
 				22B0522C1D7CBDB500BDA82F /* Assets.xcassets */,
 				22B0522E1D7CBDB500BDA82F /* LaunchScreen.storyboard */,
 				22B052311D7CBDB500BDA82F /* Info.plist */,
+				2279A6581D8E0EA300D96195 /* MisContactosVC.swift */,
+				2225E2121D8FE395004F69CC /* road.jpeg */,
 			);
 			path = MovilesAseguradora;
 			sourceTree = "<group>";
@@ -125,6 +180,17 @@
 			path = MovilesAseguradoraUITests;
 			sourceTree = "<group>";
 		};
+		22B052531D7CC8C100BDA82F /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				22B052541D7CC8EB00BDA82F /* app.swift */,
+				2279A6561D8DF88500D96195 /* Message.swift */,
+				2279A6541D8DE0D100D96195 /* Contacto.swift */,
+				225743841D8E23C60062007B /* ContactoCell.swift */,
+			);
+			name = Logic;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +201,7 @@
 				22B0521E1D7CBDB500BDA82F /* Sources */,
 				22B0521F1D7CBDB500BDA82F /* Frameworks */,
 				22B052201D7CBDB500BDA82F /* Resources */,
+				2257438C1D8F13F00062007B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,6 +260,7 @@
 				TargetAttributes = {
 					22B052211D7CBDB500BDA82F = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = PTNBHSU8LM;
 					};
 					22B052351D7CBDB600BDA82F = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -232,6 +300,7 @@
 				22B052301D7CBDB500BDA82F /* LaunchScreen.storyboard in Resources */,
 				22B0522D1D7CBDB500BDA82F /* Assets.xcassets in Resources */,
 				22B0522B1D7CBDB500BDA82F /* Main.storyboard in Resources */,
+				2225E2131D8FE395004F69CC /* road.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +325,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22B052281D7CBDB500BDA82F /* ViewController.swift in Sources */,
+				22B052281D7CBDB500BDA82F /* mainVC.swift in Sources */,
+				22A067141D804F9900F44027 /* ContactoDetalleVC.swift in Sources */,
+				2279A6551D8DE0D100D96195 /* Contacto.swift in Sources */,
+				22B0525D1D7F445100BDA82F /* operators.swift in Sources */,
+				225743851D8E23C60062007B /* ContactoCell.swift in Sources */,
+				22B052551D7CC8EB00BDA82F /* app.swift in Sources */,
+				2279A6591D8E0EA300D96195 /* MisContactosVC.swift in Sources */,
+				22B052571D7CC99C00BDA82F /* EmergenciaVC.swift in Sources */,
+				22B052591D7CDEE100BDA82F /* EmergenciaDetalleVC.swift in Sources */,
+				2279A6571D8DF88500D96195 /* Message.swift in Sources */,
 				22B052261D7CBDB500BDA82F /* AppDelegate.swift in Sources */,
+				22B0525B1D7F231F00BDA82F /* ContactosVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,10 +478,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MovilesAseguradora/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dscm.MovilesAseguradora;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -410,10 +497,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MovilesAseguradora/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dscm.MovilesAseguradora;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -482,6 +577,7 @@
 				22B0524C1D7CBDB600BDA82F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22B0524D1D7CBDB600BDA82F /* Build configuration list for PBXNativeTarget "MovilesAseguradoraTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +586,7 @@
 				22B0524F1D7CBDB600BDA82F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22B052501D7CBDB600BDA82F /* Build configuration list for PBXNativeTarget "MovilesAseguradoraUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +595,7 @@
 				22B052521D7CBDB600BDA82F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

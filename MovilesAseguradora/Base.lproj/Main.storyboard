@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gg1-yG-G8p">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Emergencias App-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MovilesAseguradora" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,410 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="road.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="cOY-0R-5iV">
+                                <rect key="frame" x="-1457" y="-740" width="2567" height="1711"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQI-9O-oI8">
+                                <rect key="frame" x="119" y="444" width="171" height="75"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Llamar Aseguradora">
+                                    <color key="titleColor" red="0.99194461107254028" green="0.99615627527236938" blue="0.99600595235824585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="contactosBoton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BLz-n4-pbh"/>
+                                    <action selector="phoneCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ax5-Qm-rmn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqe-Ig-PVf">
+                                <rect key="frame" x="119" y="342" width="171" height="75"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Mi Poliza">
+                                    <color key="titleColor" red="0.99194461107254028" green="0.99615627527236938" blue="0.99600595235824585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="contactosBoton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FVt-Ob-pTm"/>
+                                    <action selector="showPoliza:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RhW-0j-dqI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8co-ej-Tt5">
+                                <rect key="frame" x="119" y="240" width="171" height="75"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Mis contactos">
+                                    <color key="titleColor" red="0.99194461107254028" green="0.99615627527236938" blue="0.99600595235824585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="contactosBoton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RnG-iI-ej6"/>
+                                    <segue destination="goW-wD-npG" kind="show" id="tEZ-5C-3VJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iob-WU-ESm">
+                                <rect key="frame" x="101" y="106" width="207" height="92"/>
+                                <color key="backgroundColor" red="0.99555546045303345" green="0.0047649610787630081" blue="0.16892936825752258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Emergencia">
+                                    <color key="titleColor" red="0.99203723669052124" green="0.9921455979347229" blue="0.9961208701133728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qw1-tr-6k8" kind="show" id="irT-hM-mMh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XQI-9O-oI8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N7c-HC-6Ne"/>
+                            <constraint firstItem="iob-WU-ESm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WXy-Nc-lM8"/>
+                            <constraint firstItem="8co-ej-Tt5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yFS-Mp-kHx"/>
+                            <constraint firstItem="aqe-Ig-PVf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zVU-UP-QQm"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Emergencias App" id="4Wo-sz-AwZ"/>
+                    <connections>
+                        <outlet property="MisContactosButton" destination="8co-ej-Tt5" id="gMB-uw-WK1"/>
+                        <outlet property="emergenciaButt" destination="iob-WU-ESm" id="Xfl-YD-zJt"/>
+                        <outlet property="llamarButton" destination="XQI-9O-oI8" id="aCj-72-3iY"/>
+                        <outlet property="miPolizaButton" destination="aqe-Ig-PVf" id="qfZ-Ly-PQX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="899" y="325"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="wy5-n4-4RK">
+            <objects>
+                <tableViewController id="goW-wD-npG" customClass="MisContactosTableViewController" customModule="MovilesAseguradora" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iZ7-zY-zD2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="miContactoCell" id="XEI-2k-q3S" customClass="ContactoCell" customModule="MovilesAseguradora" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XEI-2k-q3S" id="h02-Tq-UHR">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="qc7-D4-Gsm" kind="show" identifier="miContacto" id="6pN-Wl-rHL"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactoCell" id="s8Z-wD-7Xm">
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s8Z-wD-7Xm" id="ya1-wH-LAa">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="goW-wD-npG" id="d3g-bF-Cw8"/>
+                            <outlet property="delegate" destination="goW-wD-npG" id="ndv-ai-Uhs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="slX-DI-3C6">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="6Iu-ZN-wNC">
+                            <connections>
+                                <segue destination="tai-IY-ztN" kind="show" identifier="Contacto" id="j1i-a0-N7f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="plusButton" destination="6Iu-ZN-wNC" id="gmf-7v-g4E"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wct-Ds-QDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1603" y="325"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="9b4-Qz-9GF">
+            <objects>
+                <tableViewController id="tai-IY-ztN" customClass="ContactosTableViewController" customModule="MovilesAseguradora" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Nxf-ou-Yft">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactoCell" id="iIf-XA-jVu" customClass="ContactoCell" customModule="MovilesAseguradora" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iIf-XA-jVu" id="kZ8-vR-9E1">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="qc7-D4-Gsm" kind="show" identifier="contactoDetalle" id="a7f-MH-uib"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tai-IY-ztN" id="z1p-bs-DR9"/>
+                            <outlet property="delegate" destination="tai-IY-ztN" id="QHu-ai-8jE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="zK3-rn-5Kt"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OyC-5i-NNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2303" y="354"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="WRA-sh-YyL">
+            <objects>
+                <viewController id="qc7-D4-Gsm" customClass="ContactoDetalleViewController" customModule="MovilesAseguradora" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hza-0b-ymc"/>
+                        <viewControllerLayoutGuide type="bottom" id="5o3-Vh-9AP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tyu-Tj-tZd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtu-1w-kmK">
+                                <rect key="frame" x="48" y="124" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="123123123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFa-oX-av4">
+                                <rect key="frame" x="48" y="153" width="272" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V35-D1-775">
+                                <rect key="frame" x="48" y="198" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="123123123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUe-gw-3wF">
+                                <rect key="frame" x="48" y="227" width="272" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWf-eP-M6Y">
+                                <rect key="frame" x="26" y="324" width="172" height="30"/>
+                                <state key="normal" title="Agregar Contacto"/>
+                                <connections>
+                                    <action selector="agregarContactoButton:" destination="qc7-D4-Gsm" eventType="touchUpInside" id="uHK-ZP-qzZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esZ-RK-UpD">
+                                <rect key="frame" x="26" y="369" width="172" height="30"/>
+                                <state key="normal" title="Eliminar Contacto"/>
+                                <connections>
+                                    <action selector="deleteButton:" destination="qc7-D4-Gsm" eventType="touchUpInside" id="Euk-Uy-Ipn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="WhY-kZ-eL1"/>
+                    <connections>
+                        <outlet property="contactoTitulo" destination="WhY-kZ-eL1" id="8Wu-mM-CF3"/>
+                        <outlet property="correoLabel" destination="MUe-gw-3wF" id="mVj-HJ-3F1"/>
+                        <outlet property="deleteButton" destination="esZ-RK-UpD" id="tgr-Jk-5l0"/>
+                        <outlet property="numberLabel" destination="bFa-oX-av4" id="41K-IF-0oL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gA0-Jz-ctX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2281" y="-362"/>
+        </scene>
+        <!--Emergencias-->
+        <scene sceneID="9ey-AJ-pjG">
+            <objects>
+                <viewController id="qw1-tr-6k8" customClass="EmergenciaViewController" customModule="MovilesAseguradora" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ddt-vd-1gt"/>
+                        <viewControllerLayoutGuide type="bottom" id="kB1-0B-vkK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WIy-4d-Klc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IKC-oS-UVH">
+                                <rect key="frame" x="0.0" y="64" width="600" height="424"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="qzA-qB-hyb">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qzA-qB-hyb" id="eOI-It-fAs">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="cwm-Wv-yLr" kind="show" identifier="emergenciaDetalle" id="XwK-El-PZi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Emergencias" id="fj3-nR-vQe">
+                        <barButtonItem key="backBarButtonItem" title="Atras" id="meY-gi-zJz"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emergenciasTable" destination="IKC-oS-UVH" id="cRD-fz-kJm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Np-oq-Tns" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1591" y="1105"/>
+        </scene>
+        <!--Emergencia Detalle-->
+        <scene sceneID="lq1-Ip-M95">
+            <objects>
+                <viewController id="cwm-Wv-yLr" customClass="EmergenciaDetalleViewController" customModule="MovilesAseguradora" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qBg-Yx-2PD"/>
+                        <viewControllerLayoutGuide type="bottom" id="AJn-n9-WGC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c6G-Of-Xy6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripción" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFG-QN-W4z">
+                                <rect key="frame" x="20" y="87" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ev3-xN-7wO">
+                                <rect key="frame" x="0.0" y="217" width="532" height="128"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ywE-Qm-1TP">
+                                        <rect key="frame" x="0.0" y="0.0" width="532" height="128"/>
+                                        <subviews>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZBg-4y-041">
+                                                <rect key="frame" x="0.0" y="0.0" width="532" height="128"/>
+                                            </mapView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ZBg-4y-041" secondAttribute="trailing" constant="10" id="MtD-0U-HdA"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ywE-Qm-1TP" firstAttribute="centerX" secondItem="ev3-xN-7wO" secondAttribute="centerX" id="2Dt-Dy-zvn"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="esZ-vd-lQV">
+                                <rect key="frame" x="20" y="116" width="270" height="85"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VbQ-sf-8WI">
+                                <rect key="frame" x="20" y="413" width="160" height="30"/>
+                                <state key="normal" title="Contactar Aseguradora"/>
+                                <connections>
+                                    <action selector="contactarAseguradora:" destination="cwm-Wv-yLr" eventType="touchUpInside" id="cgm-EL-1EB"/>
+                                    <action selector="sendHelp:" destination="cwm-Wv-yLr" eventType="touchUpInside" id="19O-2r-xxn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxz-KW-Lw6">
+                                <rect key="frame" x="20" y="366" width="248" height="30"/>
+                                <state key="normal" title="Informar a contactos de emergencia"/>
+                                <connections>
+                                    <action selector="sendHelp:" destination="cwm-Wv-yLr" eventType="touchUpInside" id="NAU-M7-SA7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="esZ-vd-lQV" firstAttribute="centerX" secondItem="c6G-Of-Xy6" secondAttribute="centerX" id="BD9-2b-5YP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Emergencia Detalle" id="5tG-6z-klY"/>
+                    <connections>
+                        <outlet property="DescripcionTextView" destination="esZ-vd-lQV" id="umh-n1-2Ph"/>
+                        <outlet property="mapView" destination="ZBg-4y-041" id="9O5-kw-cit"/>
+                        <outlet property="titulo" destination="5tG-6z-klY" id="xKj-3j-rwk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frj-iW-79O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2281" y="1098"/>
+        </scene>
+        <!--Registrarse-->
+        <scene sceneID="fsV-6b-8YZ">
+            <objects>
+                <viewController id="2l4-Gj-0kV" customClass="RegistrarseViewController" customModule="MovilesAseguradora" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bha-eo-9rb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wx2-s6-mul"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GIj-pR-jEy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjm-IG-RQ3">
+                                <rect key="frame" x="20" y="101" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3e-vu-f1E">
+                                <rect key="frame" x="20" y="197" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kjw-a4-zqs">
+                                <rect key="frame" x="20" y="135" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yJq-0N-qHd">
+                                <rect key="frame" x="20" y="231" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KA7-Rj-Pms">
+                                <rect key="frame" x="20" y="293" width="42" height="30"/>
+                                <state key="normal" title="Entrar"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Registrarse" id="fVI-8b-C4m">
+                        <barButtonItem key="backBarButtonItem" title="Atras" id="9wW-JB-roB"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kYg-GN-VF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879" y="1105"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oYa-rB-rgv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gg1-yG-G8p" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TkU-2L-igJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="geG-pN-NZD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbN-7n-KRt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="325"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="road.jpeg" width="2567" height="1711"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="a7f-MH-uib"/>
+    </inferredMetricsTieBreakers>
 </document>
