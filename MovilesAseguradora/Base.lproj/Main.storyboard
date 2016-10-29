@@ -7,7 +7,7 @@
         <!--Emergencias App-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MovilesAseguradora" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="emergencias_app" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="MovilesAseguradora" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -330,6 +330,13 @@
                                     <action selector="sendHelp:" destination="cwm-Wv-yLr" eventType="touchUpInside" id="NAU-M7-SA7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ho9-V0-xFc">
+                                <rect key="frame" x="20" y="461" width="70" height="30"/>
+                                <state key="normal" title="Whatsapp"/>
+                                <connections>
+                                    <action selector="sendTextMessageButtonTapped:" destination="cwm-Wv-yLr" eventType="touchUpInside" id="efJ-NA-STk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -359,47 +366,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjm-IG-RQ3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjm-IG-RQ3">
                                 <rect key="frame" x="20" y="101" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3e-vu-f1E">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3e-vu-f1E">
                                 <rect key="frame" x="20" y="197" width="89" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kjw-a4-zqs">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kjw-a4-zqs">
                                 <rect key="frame" x="20" y="135" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yJq-0N-qHd">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yJq-0N-qHd">
                                 <rect key="frame" x="20" y="231" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KA7-Rj-Pms">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KA7-Rj-Pms">
                                 <rect key="frame" x="20" y="293" width="42" height="30"/>
                                 <state key="normal" title="Entrar"/>
+                                <connections>
+                                    <action selector="LogIn_btn:" destination="2l4-Gj-0kV" eventType="touchUpInside" id="zWq-3j-EvJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kjw-a4-zqs" firstAttribute="centerX" secondItem="GIj-pR-jEy" secondAttribute="centerX" id="Kd1-fd-qfs"/>
+                            <constraint firstItem="yJq-0N-qHd" firstAttribute="centerX" secondItem="GIj-pR-jEy" secondAttribute="centerX" id="a9y-Qr-UHf"/>
+                            <constraint firstItem="f3e-vu-f1E" firstAttribute="centerX" secondItem="GIj-pR-jEy" secondAttribute="centerX" id="rIm-jz-2dk"/>
+                            <constraint firstItem="kjm-IG-RQ3" firstAttribute="centerX" secondItem="GIj-pR-jEy" secondAttribute="centerX" id="wAm-W4-3hG"/>
+                            <constraint firstItem="KA7-Rj-Pms" firstAttribute="centerX" secondItem="GIj-pR-jEy" secondAttribute="centerX" id="yYT-7v-wFr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Registrarse" id="fVI-8b-C4m">
                         <barButtonItem key="backBarButtonItem" title="Atras" id="9wW-JB-roB"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="password_txt" destination="yJq-0N-qHd" id="Eo0-NA-i21"/>
+                        <outlet property="user_txt" destination="kjw-a4-zqs" id="43D-1v-MDd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kYg-GN-VF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879" y="1105"/>
+            <point key="canvasLocation" x="57" y="1139"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--My Nav View Controller-->
         <scene sceneID="oYa-rB-rgv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gg1-yG-G8p" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gg1-yG-G8p" customClass="myNavViewController" customModule="MovilesAseguradora" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TkU-2L-igJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -419,6 +440,6 @@
         <image name="road.jpeg" width="2567" height="1711"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="a7f-MH-uib"/>
+        <segue reference="6pN-Wl-rHL"/>
     </inferredMetricsTieBreakers>
 </document>

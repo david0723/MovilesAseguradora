@@ -23,7 +23,8 @@ class EmergenciaDetalleViewController: UIViewController, MKMapViewDelegate, CLLo
     @IBOutlet weak var DescripcionTextView: UITextView!
     let l = CLLocationManager()
     var pin = false
-    
+    var latitude: String?
+    var longitud: String?
     
     @IBAction func contactarAseguradora(sender: AnyObject)
     {
@@ -38,6 +39,7 @@ class EmergenciaDetalleViewController: UIViewController, MKMapViewDelegate, CLLo
         }
         alert("---")
     }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -51,7 +53,9 @@ class EmergenciaDetalleViewController: UIViewController, MKMapViewDelegate, CLLo
         self.l.desiredAccuracy = kCLLocationAccuracyBest
         self.l.requestWhenInUseAuthorization()
         self.l.startUpdatingLocation()
-//        self.mapView.showsUserLocation = true
+        self.mapView.showsUserLocation = true
+        self.latitude = String(format: "%f", (self.l.location?.coordinate.latitude)!)
+        self.longitud = String(format: "%f", (self.l.location?.coordinate.longitude)!)
         
         
         
@@ -62,11 +66,14 @@ class EmergenciaDetalleViewController: UIViewController, MKMapViewDelegate, CLLo
             var descripcion = "Tuve una emergencia de tipo " + label
             
             descripcion += "\n"
-            descripcion += "En la calle *** con carrera ***"
+            descripcion += "En \(self.getJSON(latitude!, long: longitud!))"
             descripcion += "\n"
             
             DescripcionTextView.text = descripcion
         }
+        print("view did load")
+        print(latitude)
+        print(latitude!)
         
         
         
@@ -147,6 +154,12 @@ class EmergenciaDetalleViewController: UIViewController, MKMapViewDelegate, CLLo
     {
         let location = locations.last
         
+        latitude = "\(location?.coordinate.latitude)"
+        longitud = "\(location?.coordinate.longitude)"
+        
+//        print(latitude)
+//        print(longitud)
+        
         let center = CLLocationCoordinate2D(latitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!)
         
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
@@ -182,5 +195,78 @@ class EmergenciaDetalleViewController: UIViewController, MKMapViewDelegate, CLLo
         }
         alertController.addAction(okAction)
         self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func sendTextMessageButtonTapped(sender: UIButton)
+    {
+        let urlString = "Sending WhatsApp message through app in Swift"
+        let urlStringEncoded = urlString.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
+        let url  = NSURL(string: "whatsapp://send?text=\(urlStringEncoded!)")
+        
+        if UIApplication.sharedApplication().canOpenURL(url!)
+        {
+            UIApplication.sharedApplication().openURL(url!)
+        }
+        else
+        {
+            alert("No se pudo :p")
+        }
+        
+    }
+    
+    func getJSON(lat: String, long: String) -> String
+    {
+
+        let url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(lat),\(long)&key=AIzaSyDmi_hjlSBcxwXPXznvUG0RAPp5k9awf2c"
+
+//        print("url: \(url)")
+        let jsonData = NSData(contentsOfURL: NSURL(string: url)!)!
+        
+        do
+        {
+            let json = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments)
+//            print(json)
+            
+            return (json["results"]!![0]["formatted_address"] as? String)!
+            
+
+            
+//            if let results = json["results"] as? [[String: AnyObject]]
+//            {
+//                print("results 0")
+//                print(results[0])
+//
+//                if let a = results[]
+//            }
+//            else
+//            {
+//                print("pailas")
+//            }
+            
+        }
+        catch
+        {
+            
+        }
+        return "No address Av"
+    }
+    
+    func makeHTTPGetRequest(path: String)
+    {
+        let request = NSMutableURLRequest(URL: NSURL(string: path)!)
+        
+        let session = NSURLSession.sharedSession()
+        
+        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+//            if let jsonData = data
+//            {
+//                
+//            }
+//            else
+//            {
+//
+//            }
+        })
+        task.resume()
     }
 }

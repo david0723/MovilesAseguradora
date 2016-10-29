@@ -16,6 +16,7 @@
 		2279A6551D8DE0D100D96195 /* Contacto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A6541D8DE0D100D96195 /* Contacto.swift */; };
 		2279A6571D8DF88500D96195 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A6561D8DF88500D96195 /* Message.swift */; };
 		2279A6591D8E0EA300D96195 /* MisContactosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279A6581D8E0EA300D96195 /* MisContactosVC.swift */; };
+		22893D931DC19C6C001B3915 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22893D921DC19C6C001B3915 /* LogInVC.swift */; };
 		22A067141D804F9900F44027 /* ContactoDetalleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A067131D804F9900F44027 /* ContactoDetalleVC.swift */; };
 		22B052261D7CBDB500BDA82F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B052251D7CBDB500BDA82F /* AppDelegate.swift */; };
 		22B052281D7CBDB500BDA82F /* mainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B052271D7CBDB500BDA82F /* mainVC.swift */; };
@@ -71,6 +72,7 @@
 		2279A6541D8DE0D100D96195 /* Contacto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contacto.swift; sourceTree = "<group>"; };
 		2279A6561D8DF88500D96195 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		2279A6581D8E0EA300D96195 /* MisContactosVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisContactosVC.swift; sourceTree = "<group>"; };
+		22893D921DC19C6C001B3915 /* LogInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		22A067131D804F9900F44027 /* ContactoDetalleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactoDetalleVC.swift; sourceTree = "<group>"; };
 		22B052221D7CBDB500BDA82F /* MovilesAseguradora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovilesAseguradora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B052251D7CBDB500BDA82F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				22B0525C1D7F445100BDA82F /* operators.swift */,
 				22B052271D7CBDB500BDA82F /* mainVC.swift */,
 				22B052581D7CDEE100BDA82F /* EmergenciaDetalleVC.swift */,
+				22893D921DC19C6C001B3915 /* LogInVC.swift */,
 				22B052561D7CC99C00BDA82F /* EmergenciaVC.swift */,
 				22B0525A1D7F231F00BDA82F /* ContactosVC.swift */,
 				22A067131D804F9900F44027 /* ContactoDetalleVC.swift */,
@@ -327,6 +330,7 @@
 			files = (
 				22B052281D7CBDB500BDA82F /* mainVC.swift in Sources */,
 				22A067141D804F9900F44027 /* ContactoDetalleVC.swift in Sources */,
+				22893D931DC19C6C001B3915 /* LogInVC.swift in Sources */,
 				2279A6551D8DE0D100D96195 /* Contacto.swift in Sources */,
 				22B0525D1D7F445100BDA82F /* operators.swift in Sources */,
 				225743851D8E23C60062007B /* ContactoCell.swift in Sources */,
@@ -480,6 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -499,6 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
