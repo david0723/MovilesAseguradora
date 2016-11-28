@@ -11,9 +11,15 @@ import MapKit
 import CoreLocation
 import MessageUI
 import RealmSwift
+import MobileCoreServices
 
-class EmergenciaDetalleViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, MFMessageComposeViewControllerDelegate, UITextViewDelegate
+class EmergenciaDetalleViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, MFMessageComposeViewControllerDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
+    
+    var img : UIImage?
+    
+    
+    @IBOutlet weak var imageOnView: UIImageView!
     var emergencia: String?
     
     @IBOutlet weak var mapView: MKMapView!
@@ -42,6 +48,12 @@ class EmergenciaDetalleViewController: UIViewController, MKMapViewDelegate, CLLo
     
     override func viewDidLoad()
     {
+        if (UIScreen.mainScreen().brightness < 0.2)
+        {
+            self.view.backgroundColor = UIColor.blackColor()
+        }
+        
+        
         super.viewDidLoad()
         
         let borderColor = UIColor(colorLiteralRed: 255, green: 255, blue: 255, alpha: 1)
@@ -54,8 +66,25 @@ class EmergenciaDetalleViewController: UIViewController, MKMapViewDelegate, CLLo
         self.l.requestWhenInUseAuthorization()
         self.l.startUpdatingLocation()
         self.mapView.showsUserLocation = true
-        self.latitude = String(format: "%f", (self.l.location?.coordinate.latitude)!)
-        self.longitud = String(format: "%f", (self.l.location?.coordinate.longitude)!)
+        
+        let lat_double = ((self.l.location?.coordinate.latitude)! as Double)
+        
+        let lon_double = ((self.l.location?.coordinate.longitude)! as Double)
+        
+        
+        print("lat double: \(lat_double)")
+        print("lon double: \(lon_double)")
+        
+        let lat_string = "\(lat_double)"
+        let lon_string = "\(lon_double)"
+        
+        print("lat string: \(lat_string)")
+        print("lon string: \(lon_string)")
+        
+        self.latitude = lat_string
+        
+        
+        self.longitud = lon_string
         
         
         
@@ -72,8 +101,8 @@ class EmergenciaDetalleViewController: UIViewController, MKMapViewDelegate, CLLo
             DescripcionTextView.text = descripcion
         }
         print("view did load")
-        print(latitude)
-        print(latitude!)
+//        print(latitude)
+//        print(latitude!)
         
         
         
@@ -84,6 +113,26 @@ class EmergenciaDetalleViewController: UIViewController, MKMapViewDelegate, CLLo
 
     }
     var punto: MKPointAnnotation?
+    
+    func openCamera()
+    {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
+            imagePicker.allowsEditing = false
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!)
+    {
+        imageOnView.contentMode = .ScaleAspectFit
+        imageOnView.image = image
+        self.img = image
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
     
     
     func action(gestureRecognizer:UIGestureRecognizer)
@@ -117,6 +166,10 @@ class EmergenciaDetalleViewController: UIViewController, MKMapViewDelegate, CLLo
         sendSMS(DescripcionTextView.text)
 
     }
+    @IBAction func TakePicture(sender: AnyObject)
+    {
+        self.openCamera()
+    }
     
     func getRecipients() -> [String]
     {
@@ -140,6 +193,12 @@ class EmergenciaDetalleViewController: UIViewController, MKMapViewDelegate, CLLo
             controller.body = mensaje
             controller.recipients = getRecipients()
             controller.messageComposeDelegate = self
+            if let i = self.img
+            {
+                controller.addAttachmentData(UIImagePNGRepresentation(i)!, typeIdentifier: kUTTypePNG as String, filename: "image.png")
+                
+            }
+            
             
             self.presentViewController(controller, animated: true, completion: nil)
         }
@@ -199,7 +258,7 @@ class EmergenciaDetalleViewController: UIViewController, MKMapViewDelegate, CLLo
     
     @IBAction func sendTextMessageButtonTapped(sender: UIButton)
     {
-        let urlString = "Sending WhatsApp message through app in Swift"
+        let urlString = DescripcionTextView.text
         let urlStringEncoded = urlString.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
         let url  = NSURL(string: "whatsapp://send?text=\(urlStringEncoded!)")
         
@@ -219,13 +278,13 @@ class EmergenciaDetalleViewController: UIViewController, MKMapViewDelegate, CLLo
 
         let url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(lat),\(long)&key=AIzaSyDmi_hjlSBcxwXPXznvUG0RAPp5k9awf2c"
 
-//        print("url: \(url)")
+        print("url: \(url)")
         let jsonData = NSData(contentsOfURL: NSURL(string: url)!)!
         
         do
         {
             let json = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments)
-//            print(json)
+            print(json)
             
             return (json["results"]!![0]["formatted_address"] as? String)!
             

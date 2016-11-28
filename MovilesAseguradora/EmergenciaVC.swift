@@ -24,6 +24,11 @@ class EmergenciaViewController: UIViewController, UITableViewDataSource,UITableV
         
         emergenciasTable.dataSource = self
         emergenciasTable.delegate = self
+        
+        if (UIScreen.mainScreen().brightness < 0.2)
+        {
+            self.view.backgroundColor = UIColor.blackColor()
+        }
     }
     
     override func didReceiveMemoryWarning()

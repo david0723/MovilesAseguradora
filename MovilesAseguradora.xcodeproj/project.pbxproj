@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2225E2131D8FE395004F69CC /* road.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2225E2121D8FE395004F69CC /* road.jpeg */; };
+		223499D41DEA67FA00B2AFF0 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223499D31DEA67FA00B2AFF0 /* LocalAuthentication.framework */; };
+		2247FCC61DEB9F2F00AC6ECE /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 2247FCC51DEB9F2F00AC6ECE /* box.png */; };
 		225743851D8E23C60062007B /* ContactoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225743841D8E23C60062007B /* ContactoCell.swift */; };
 		225743881D8F13EF0062007B /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225743861D8F13EF0062007B /* Realm.framework */; };
 		225743891D8F13EF0062007B /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 225743861D8F13EF0062007B /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -66,6 +68,8 @@
 
 /* Begin PBXFileReference section */
 		2225E2121D8FE395004F69CC /* road.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = road.jpeg; sourceTree = "<group>"; };
+		223499D31DEA67FA00B2AFF0 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		2247FCC51DEB9F2F00AC6ECE /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
 		225743841D8E23C60062007B /* ContactoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactoCell.swift; sourceTree = "<group>"; };
 		225743861D8F13EF0062007B /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		225743871D8F13EF0062007B /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223499D41DEA67FA00B2AFF0 /* LocalAuthentication.framework in Frameworks */,
 				2257438A1D8F13EF0062007B /* RealmSwift.framework in Frameworks */,
 				225743881D8F13EF0062007B /* Realm.framework in Frameworks */,
 			);
@@ -124,12 +129,14 @@
 		22B052191D7CBDB500BDA82F = {
 			isa = PBXGroup;
 			children = (
+				223499D31DEA67FA00B2AFF0 /* LocalAuthentication.framework */,
 				225743861D8F13EF0062007B /* Realm.framework */,
 				225743871D8F13EF0062007B /* RealmSwift.framework */,
 				22B052241D7CBDB500BDA82F /* MovilesAseguradora */,
 				22B052391D7CBDB600BDA82F /* MovilesAseguradoraTests */,
 				22B052441D7CBDB600BDA82F /* MovilesAseguradoraUITests */,
 				22B052231D7CBDB500BDA82F /* Products */,
+				2247FCC51DEB9F2F00AC6ECE /* box.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,12 +161,12 @@
 				22893D921DC19C6C001B3915 /* LogInVC.swift */,
 				22B052561D7CC99C00BDA82F /* EmergenciaVC.swift */,
 				22B0525A1D7F231F00BDA82F /* ContactosVC.swift */,
+				2279A6581D8E0EA300D96195 /* MisContactosVC.swift */,
 				22A067131D804F9900F44027 /* ContactoDetalleVC.swift */,
 				22B052291D7CBDB500BDA82F /* Main.storyboard */,
 				22B0522C1D7CBDB500BDA82F /* Assets.xcassets */,
 				22B0522E1D7CBDB500BDA82F /* LaunchScreen.storyboard */,
 				22B052311D7CBDB500BDA82F /* Info.plist */,
-				2279A6581D8E0EA300D96195 /* MisContactosVC.swift */,
 				2225E2121D8FE395004F69CC /* road.jpeg */,
 			);
 			path = MovilesAseguradora;
@@ -302,6 +309,7 @@
 			files = (
 				22B052301D7CBDB500BDA82F /* LaunchScreen.storyboard in Resources */,
 				22B0522D1D7CBDB500BDA82F /* Assets.xcassets in Resources */,
+				2247FCC61DEB9F2F00AC6ECE /* box.png in Resources */,
 				22B0522B1D7CBDB500BDA82F /* Main.storyboard in Resources */,
 				2225E2131D8FE395004F69CC /* road.jpeg in Resources */,
 			);
@@ -482,6 +490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -495,6 +504,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dscm.MovilesAseguradora;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -502,6 +512,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -515,13 +526,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dscm.MovilesAseguradora;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		22B0524E1D7CBDB600BDA82F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MovilesAseguradoraTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dscm.MovilesAseguradoraTests;
@@ -533,7 +544,6 @@
 		22B0524F1D7CBDB600BDA82F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MovilesAseguradoraTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dscm.MovilesAseguradoraTests;
